@@ -1,0 +1,114 @@
+/*start global*/
+body {
+    background: #000;
+    font-family: "Roboto", sans-serif;
+
+}
+/*end global*/
+
+/*start content*/
+.content {
+    height: 100vh;
+    .row {
+        height: 100vh;
+    }
+    .img_side {
+        display: block;
+        width: 50%;
+        height: 100vh;
+        .row {
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .form_side {
+        width: 50%;
+        height: 100vh;
+        .row {
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            form {
+                display: block;
+                width: 90%;
+                margin: 50px;
+                .form_title {
+                
+                }
+                .wrapper {
+                    .input-data{
+                        min-height: 40px;
+                        width: 100%;
+                        position: relative;
+                        margin: 25px auto;
+                        
+                    }
+                    .input-data input{
+                        height: 40px;
+                        width: 100%;
+                        border: none;
+                        font-size: 17px;
+                        border-bottom: 2px solid silver;
+                        outline: none;
+                        background: #000;
+                        color: #fff;
+                    }   
+                    .input-data input:focus ~ label,
+                    .input-data input:valid ~ label{
+                        transform: translateY(-20px);
+                        font-size: 15px;
+                        color: $mainColor;
+                    }
+                    .input-data label{
+                        position: absolute;
+                        bottom: 10px;
+                        left: 0;
+                        color: #fff;
+                        pointer-events: none;
+                        transition: all 0.5s ease;
+                        text-transform: capitalize;
+                    }
+                    .input-data .underline{
+                        position: absolute;
+                        height: 2px;
+                        width: 100%;
+                        bottom: 0;
+                    }
+                    .input-data .underline:before{
+                        position: absolute;
+                        content: "";
+                        height: 100%;
+                        width: 100%;
+                        background: $mainColor;
+                        transform: scaleX(0);
+                        transform-origin: center;
+                        transition: transform 0.3s ease;
+                    }
+                    .input-data input:focus ~ .underline:before,
+                    .input-data input:valid ~ .underline:before{
+                        transform: scaleX(1);
+                    }
+                    
+                    .sub-btn{
+                        display: block;
+                        margin-top:40px;
+                        font-size: $mainSize;
+                        cursor: pointer;
+                        background: $mainColor;
+                        color: #fff;
+                        padding: 8px;
+                        border: none;
+                        border-radius: 5px;
+                        outline: none;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}
+/*end content*/

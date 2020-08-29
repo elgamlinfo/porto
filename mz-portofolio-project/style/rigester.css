@@ -1,0 +1,148 @@
+/*global style*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  display: block;
+  margin: auto;
+  width: 100%;
+  padding: 0px 15px 0px 15px;
+}
+@media (min-width : 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width : 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width : 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*global style*/
+/*start global*/
+body {
+  background: #000;
+  font-family: "Roboto", sans-serif;
+}
+
+/*end global*/
+/*start content*/
+.content {
+  height: 100vh;
+}
+.content .row {
+  height: 100vh;
+}
+.content .img_side {
+  display: block;
+  width: 50%;
+  height: 100vh;
+}
+.content .img_side .row {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.content .img_side .row img {
+  width: 100%;
+}
+.content .form_side {
+  width: 50%;
+  height: 100vh;
+}
+.content .form_side .row {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.content .form_side .row form {
+  display: block;
+  width: 90%;
+  margin: 50px;
+}
+.content .form_side .row form .wrapper .input-data {
+  min-height: 40px;
+  width: 100%;
+  position: relative;
+  margin: 25px auto;
+}
+.content .form_side .row form .wrapper .input-data input {
+  height: 40px;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid silver;
+  outline: none;
+  background: #000;
+  color: #fff;
+}
+.content .form_side .row form .wrapper .input-data input:focus ~ label,
+.content .form_side .row form .wrapper .input-data input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #ff3366;
+}
+.content .form_side .row form .wrapper .input-data label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #fff;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  text-transform: capitalize;
+}
+.content .form_side .row form .wrapper .input-data .underline {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+}
+.content .form_side .row form .wrapper .input-data .underline:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #ff3366;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.content .form_side .row form .wrapper .input-data input:focus ~ .underline:before,
+.content .form_side .row form .wrapper .input-data input:valid ~ .underline:before {
+  transform: scaleX(1);
+}
+.content .form_side .row form .wrapper .sub-btn {
+  display: block;
+  margin-top: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  background: #ff3366;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  float: right;
+}
+
+/*end content*/
+
+/*# sourceMappingURL=rigester.css.map */
